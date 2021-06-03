@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Artist extends Model
+class Artista extends Model
 {
     //vvincular modelo atributo
     protected $table="artist";
