@@ -15,6 +15,12 @@ class Customer extends Model
       //omitir campos de auditoria
       public $timestamps = false;
 
+      //RELACION ENTRE CLIENTE Y SUS FACTURAS1-M
+      public function facturas(){
+          //utilizoelmetodo de eloquent:hasmany
+          return $this-> hasMany( 'App\Factura', 'CustomerId');
+
+      }
 
 }
 //find () : selecciona una instancia(registro) por PK o id
@@ -25,3 +31,5 @@ class Customer extends Model
 //get se utiliza si trae varios registros
 //orderby: ordena por atributo, ascendente(por defecto), o descendente
 //wherebetween(filtro entre 2 valores)
+
+
